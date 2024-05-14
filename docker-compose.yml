@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+
+  user-auth-db:
+    container_name: user-auth-db
+    image: postgres
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=user-auth
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
