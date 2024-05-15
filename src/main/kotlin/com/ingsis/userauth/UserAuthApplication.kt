@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class UserAuthApplication
 
 fun main(args: Array<String>) {
-	runApplication<UserAuthApplication>(*args)
+    runApplication<UserAuthApplication>(*args)
 }
