@@ -2,6 +2,18 @@ version: "3.7"
 
 services:
 
+  api:
+    container_name: user-auth-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8082:8082
+    environment:
+      DB_URL: jdbc:postgresql://user-auth-db:5432/user-auth
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+
   user-auth-db:
     container_name: user-auth-db
     image: postgres
